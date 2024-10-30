@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trang đánh giá sản phẩm thú cưng tại KN Petshop">
+    <meta name="keywords" content="đánh giá, thú cưng, KN Petshop">
+    <meta name="author" content="KN Petshop">
+    <title>Đánh giá sản phẩm | KN Petshop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .review-form {
+            margin-bottom: 30px;
+        }
+        .review-form input, .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .review-form button {
+            background-color: #ff6b6b;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .review-form button:hover {
+            background-color: #e05555;
+        }
+        .review-list {
+            margin-top: 20px;
+        }
+        .review-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .review-item h3 {
+            margin: 0 0 10px;
+        }
+        .review-item p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>KN PetShop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="trangsp.html">Sản phẩm</a></li>
+                <li><a href="dichvu.html">Dịch vụ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+                <li><a href="danhgia.html">Đánh giá</a></li>
+            </ul>
+        </nav>
+        <div class="cart-login">
+            <a href="giohang.html">Giỏ hàng</a>
+            <a href="login.html">Đăng nhập</a>
+        </div>
+    </header>
+
+    <!-- Container -->
+    <div class="container">
+        <h2>Đánh giá sản phẩm</h2>
+
+        <!-- Form gửi đánh giá -->
+        <div class="review-form">
+            <h3>Gửi đánh giá của bạn</h3>
+            <input type="text" id="reviewerName" placeholder="Tên của bạn" required>
+            <textarea id="reviewText" rows="4" placeholder="Nội dung đánh giá" required></textarea>
+            <button onclick="submitReview()">Gửi đánh giá</button>
+        </div>
+
+        <!-- Danh sách đánh giá -->
+        <div class="review-list" id="reviewList">
+            <h3>Các đánh giá đã nhận</h3>
+            <!-- Đánh giá sẽ được thêm vào đây -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 KN Petshop - Liên hệ: info@knpetshop.com</p>
+    </footer>
+
+    <script>
+        function submitReview() {
+            const name = document.getElementById('reviewerName').value;
+            const review = document.getElementById('reviewText').value;
+
+            if (name && review) {
+                const reviewList = document.getElementById('reviewList');
+
+                // Tạo phần tử đánh giá mới
+                const reviewItem = document.createElement('div');
+                reviewItem.classList.add('review-item');
+
+                // Nội dung đánh giá
+                reviewItem.innerHTML = `<h3>${name}</h3><p>${review}</p>`;
+
+                // Thêm đánh giá vào danh sách
+                reviewList.appendChild(reviewItem);
+
+                // Xóa nội dung trong form
+                document.getElementById('reviewerName').value = '';
+                document.getElementById('reviewText').value = '';
+            } else {
+                alert('Vui lòng điền đầy đủ thông tin!');
+            }
+        }
+    </script>
+</body>
+</html>

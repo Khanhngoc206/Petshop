@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cửa hàng thú cưng giá rẻ">
+    <meta name="keywords" content="thú cưng, thức ăn cho chó, thức ăn cho mèo, phụ kiện thú cưng, đò chơi cho thú cưng,Dịch vụ chăm sóc thú cưng">
+    <meta name="author" content="KN Petshop">
+    <title>Cửa hàng bán đò dành cho thú cưng - giá rẻ | KN Petshop </title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+     .banner {
+    padding: 20px; /* Thêm khoảng cách quanh phần banner */
+    text-align: center; /* Căn giữa nội dung bên trong */
+}
+.banner-text {
+    position: absolute; /* Đặt nội dung bên trên hình ảnh */
+    top: 50%; /* Đặt nội dung giữa chiều cao */
+    left: 50%; /* Đặt nội dung giữa chiều rộng */
+    transform: translate(-50%, -50%); /* Căn giữa chính xác */
+    text-align: center; /* Căn giữa văn bản */
+    color: #fff; /* Màu chữ mặc định */
+    padding: 20px; /* Thêm khoảng cách xung quanh nội dung */
+  /* Nền mờ để làm nổi bật chữ */
+    border-radius: 10px; /* Bo tròn các góc nền */
+}
+
+.banner-text h2 {
+    font-size: 3rem; /* Kích thước chữ */
+    color: #ffcc00; /* Thay đổi màu chữ để nổi bật (màu vàng) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Thêm hiệu ứng bóng cho chữ */
+}
+
+.banner-text .btn {
+    background-color: #ff6b6b; /* Màu nền cho nút */
+    color: #fff; /* Màu chữ cho nút */
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    border: none; /* Bỏ viền */
+    border-radius: 5px; /* Bo tròn các góc nút */
+    margin-top: 10px; /* Khoảng cách trên nút */
+    text-decoration: none; /* Bỏ gạch dưới */
+}
+
+        .category {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.category-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.category-item {
+    flex: 1 1 200px;
+    margin: 10px;
+    text-align: center;
+    max-width: 250px; /* Đặt giới hạn chiều rộng cho mỗi danh mục */
+}
+
+.category-item img {
+    width: 100%;
+    height: 200px; /* Chiều cao cố định để đảm bảo ảnh đều nhau */
+    object-fit: cover; /* Điều chỉnh hình ảnh để vừa khung mà không bị biến dạng */
+    border-radius: 10px; /* Tùy chỉnh bo tròn góc nếu muốn */
+}
+
+.category-item a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+.featured-products {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-between; /* Canh đều các sản phẩm */
+    flex-wrap: wrap; /* Để sản phẩm xuống hàng nếu cần */
+    gap: 20px; /* Tạo khoảng cách giữa các sản phẩm */
+}
+
+.product-item {
+    flex: 1 1 200px; /* Mỗi sản phẩm có độ rộng tối thiểu 200px */
+    max-width: 250px; /* Giới hạn chiều rộng tối đa cho mỗi sản phẩm */
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Bo tròn các góc */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-10px); /* Hiệu ứng hover */
+}
+
+.product-item img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của khung sản phẩm */
+    height: 200px; /* Chiều cao cố định để đảm bảo các ảnh đều nhau */
+    object-fit: cover; /* Cắt hình ảnh để vừa với khung mà không bị biến dạng */
+    border-radius: 8px; /* Bo tròn các góc ảnh */
+}
+
+.product-item h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.product-item p {
+    font-size: 1.1rem;
+    color: #ff6b6b;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-item button {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-item button:hover {
+    background-color: #e05555;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>KN PetShop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="trangsp.html">Sản phẩm</a></li>
+                <li><a href="dichvu.html">Dịch vụ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+                <li><a href="danhgia.html">Đánh giá</a></li>
+            </ul>
+        </nav>
+        <div class="cart-login">
+            <a href="giohang.html">Giỏ hàng</a>
+            <a href="login.html">Đăng nhập</a>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="hinh/banner.png" alt="Banner thú cưng">
+        <div class="banner-text">
+            <h2>Sản phẩm thú cưng giá rẻ</h2>
+            <a href="trangsp.html" class="btn">Mua ngay</a>
+        </div>
+    </section>
+
+    <!-- Danh mục sản phẩm -->
+    <section class="category">
+        <h2>Danh mục sản phẩm</h2>
+        <div class="category-list">
+            <div class="category-item">
+                <img src="hinh/cho.jpg" alt="Chó">
+                <a href="spcho.html">Chó</a>
+            </div>
+            <div class="category-item">
+                <img src="hinh/meo.jpg" alt="Mèo">
+                <a href="spmeo.html">Mèo</a>
+            </div>
+            <div class="category-item">
+                <img src="hinh/thucan.jpg" alt="Thức ăn">
+                <a href="spthucan.html">Thức ăn</a>
+            </div>
+            <div class="category-item">
+                <img src="hinh/pk3.jpg" alt="Phụ kiện">
+                <a href="phukien.html">Phụ kiện</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sản phẩm nổi bật -->
+    <section class="featured-products">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="hinh/petq.webp" alt="Sản phẩm 1">
+                <h3>Thức ăn đông khô cho thú cưng PETQ </h3>
+                <p>150.000đ</p>
+                <button>Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-item">
+                <img src="hinh/hat3.jpg" alt="Sản phẩm 2">
+                <h3>Thức ăn mèo KIT CAT 1.5kg - Dành cho mèo mọi lứa tuổi</h3>
+                <p>200.000đ</p>
+                <button>Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-item">
+                <img src="hinh/hat2.jpg" alt="Sản phẩm 3">
+                <h3>Thức ăn cho mèo từ 3 tháng trở lên Catsrang </h3>
+                <p>150.000đ</p>
+                <button>Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-item">
+                <img src="hinh/hat9.webp" alt="Sản phẩm 4">
+                <h3>Thức ăn cho chó SmartHeart </h3>
+                <p>130.000đ</p>
+                <button>Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Pet Shop - Liên hệ: info@petshop.com</p>
+    </footer>
+</body>
+</html>

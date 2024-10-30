@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cửa hàng bán thực phẩm chức năng cho thú cưng">
+    <meta name="keywords" content="thú cưng, thực phẩm chức năng, chăm sóc sức khỏe thú cưng">
+    <meta name="author" content="KN Petshop">
+    <title>Sản phẩm thực phẩm chức năng | KN Petshop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            padding: 10px;
+            background-color: #f4f4f4;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .sidebar h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 5px;
+        }
+        .sidebar li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .sidebar li a:hover {
+            color: #FFA500;
+        }
+        .products {
+            flex: 3;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-item {
+            flex: 1 1 23%; /* Bốn sản phẩm mỗi hàng */
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+        .product-item h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 10px 0;
+        }
+        .product-item p {
+            font-size: 1.1rem;
+            color: #ff6b6b;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-item .btn {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 15px;
+            background-color: #FFA500;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .product-item .btn:hover {
+            background-color: #ff7f50;
+        }
+        .product-status {
+            font-size: 0.9rem;
+            color: green;
+            margin-top: 5px;
+        }
+     
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>KN PetShop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="trangsp.html">Sản phẩm</a></li>
+                <li><a href="dichvu.html">Dịch vụ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="cart-login">
+            <a href="giohang.html">Giỏ hàng</a>
+            <a href="#">Đăng nhập</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Danh Mục Sản Phẩm</h2>
+            <ul>
+                <li><a href="spmeo.html">Sản phẩm cho mèo</a></li>
+                <li><a href="spcho.html">Sản phẩm cho chó</a></li>
+                <li><a href="thucphamchucnang.html">Thực Phẩm Chức Năng</a></li>
+                <li><a href="phukien.html">Phụ kiện</a></li>
+            </ul>
+        </aside>
+        <!-- Products Section -->
+        <div class="products">
+            <div class="product-item">
+                <img src="hinh/thucpham1.webp" alt="Gói sữa tắm trị nấm JOYCE & DOLLS dùng thử cho chó mèo">
+                <h3>Gói sữa tắm trị nấm JOYCE & DOLLS dùng thử cho chó mèo</h3>
+                <p>10.000 vnđ</p>
+                <a href="#" class="btn">Mua ngay</a>
+                <div class="product-status">Còn hàng</div>
+            </div>
+            <div class="product-item">
+                <img src="hinh/thucpham2.webp" alt="Vòng cổ trị ve rận cho mèo Magic Herbal Collar For Cat">
+                <h3>Vòng cổ trị ve rận cho mèo Magic Herbal Collar For Cat</h3>
+                <p>60.000 vnđ</p>
+                <a href="#" class="btn">Mua ngay</a>
+                <div class="product-status">Còn hàng</div>
+            </div>
+            <div class="product-item">
+                <img src="hinh/thucpham3.webp" alt="Thuốc bổ sung Vitamin tổng hợp cho chó VEGEBRAND Fruit Vitamin">
+                <h3>Thuốc bổ sung Vitamin tổng hợp cho chó VEGEBRAND Fruit Vitamin</h3>
+                <p>170.000 vnđ</p>
+                <a href="#" class="btn">Mua ngay</a>
+                <div class="product-status">Còn hàng</div>
+            </div>
+            <div class="product-item">
+                <img src="hinh/thucpham4.webp" alt="VIÊN NHAI BỔ SUNG VITAMIN TỔNG HỢP CHO MÈO - DAILY MULTI">
+                <h3>VIÊN NHAI BỔ SUNG VITAMIN TỔNG HỢP CHO MÈO - DAILY MULTI</h3>
+                <p>200.000 vnđ</p>
+                <a href="#" class="btn">Mua ngay</a>
+                <div class="product-status">Còn hàng</div>
+            </div>
+            <div class="product-item">
+                <img src="hinh/thucpham5.jpg" alt="Vitamin tổng hợp cho mèo Nourse 11 mượt lông tăng đề kháng">
+                <h3>Vitamin tổng hợp cho mèo Nourse 11 mượt lông tăng đề kháng</h3>
+                <p>250.000 vnđ</p>
+                <a href="#" class="btn">Mua ngay</a>
+                <div class="product-status">Còn hàng</div>
+            </div>
+            <div class="product-item">
+                <img src="hinh/thucpham6.webp" alt="GEL DINH DƯỠNG NUVITA CHO CHÓ MÈO">
+                <h3>GEL DINH DƯỠNG NUVITA CHO CHÓ MÈO</h3>
+                <p>80.000 vnđ</p>
+                <a href="#" class="btn">Mua ngay</a>
+                <div class="product-status">Còn hàng</div>
+            </div>
+            <!-- Thêm các sản phẩm khác tương tự -->
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 KN Petshop - Liên hệ: info@knpetshop.com</p>
+    </footer>
+</body>
+</html>

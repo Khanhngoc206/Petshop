@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Giỏ hàng của bạn - KN Petshop">
+    <meta name="keywords" content="giỏ hàng, thú cưng, mua sắm, thanh toán">
+    <meta name="author" content="KN Petshop">
+    <title>Giỏ hàng của bạn | KN Petshop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Giỏ hàng */
+        .cart {
+            margin-bottom: 40px;
+        }
+
+        .cart h2 {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-table th, .cart-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-table th {
+            background-color: #ff6b6b;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .cart-table td img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .cart-table input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .cart-table .remove-btn {
+            background-color: #ff6b6b;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cart-table .remove-btn:hover {
+            background-color: #e05555;
+        }
+
+        /* Tổng tiền và nút thanh toán */
+        .cart-summary {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .cart-summary h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .cart-summary p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .checkout-btn {
+            background-color: #ff6b6b;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            background-color: #e05555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>KN PetShop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="trangsp.html">Sản phẩm</a></li>
+                <li><a href="dichvu.html">Dịch vụ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Giỏ hàng -->
+    <section class="cart container">
+        <h2>Giỏ hàng của bạn</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Hình ảnh</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng cộng</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Thức ăn cho mèo Catsrang</td>
+                    <td><img src="hinh/hat2.jpg" alt="Thức ăn cho mèo"></td>
+                    <td>150.000đ</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>150.000đ</td>
+                    <td><button class="remove-btn">Xóa</button></td>
+                </tr>
+                <tr>
+                    <td>Vòng cổ cho thú cưng</td>
+                    <td><img src="hinh/pk1.jpg" alt="Vòng cổ cho thú cưng"></td>
+                    <td>80.000đ</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>80.000đ</td>
+                    <td><button class="remove-btn">Xóa</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tổng cộng và thanh toán -->
+        <div class="cart-summary">
+            <h3>Tổng cộng: 230.000đ</h3>
+            <p>(Đã bao gồm VAT)</p>
+            <button class="checkout-btn">Tiến hành thanh toán</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 KN Petshop - Liên hệ: info@knpetshop.com</p>
+    </footer>
+    <script>
+        function updateCartTotal() {
+            let cartItems = document.querySelectorAll('tbody tr');
+            let grandTotal = 0;
+    
+            cartItems.forEach(function(item) {
+                let priceElement = item.querySelector('.price');
+                let quantityElement = item.querySelector('.quantity');
+                let totalElement = item.querySelector('.total');
+    
+                // Kiểm tra nếu các phần tử tồn tại
+                if (priceElement && quantityElement && totalElement) {
+                    let price = parseFloat(priceElement.textContent);
+                    let quantity = parseInt(quantityElement.value);
+    
+                    if (isNaN(quantity) || quantity < 0) {
+                        quantity = 0; // Đảm bảo số lượng không âm
+                    }
+    
+                    let total = price * quantity;
+                    totalElement.textContent = total.toLocaleString('en-US');
+    
+                    grandTotal += total;
+                }
+            });
+    
+            document.getElementById('grand-total').textContent = grandTotal.toLocaleString('en-US');
+        }
+    
+        document.querySelectorAll('.quantity').forEach(function(input) {
+            input.addEventListener('change', updateCartTotal);
+        });
+    
+        document.querySelectorAll('.remove-btn').forEach(function(button) {
+            button.addEventListener('click', function() {
+                let row = this.parentElement.parentElement;
+                row.remove();
+                updateCartTotal();
+            });
+        });
+    
+        updateCartTotal();
+    </script>
+    
+</body>
+</html>
